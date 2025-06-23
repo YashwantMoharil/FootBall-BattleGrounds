@@ -1,0 +1,119 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #23272f;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  cursor: pointer;
+  position: relative;
+  background-color: #ebefe9;
+  top: 55px;
+  border: 10px solid #4e6a50; /* Darker, subtler border */
+  border-radius: 16px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add depth with shadow */
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out; /* Smooth board zoom effect on hover */
+}
+
+
+
+.grid {
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 1 / 1;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.grid:hover {
+  background-color: #d0f0c0; /* Light green hover effect */
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em; /* Reduce font size for better fit */
+  color: #333; /* Darker text color for better contrast */
+  font-weight: bold;
+}
+
+.messages {
+  font-size:  0.4em;
+  color: black;
+}
+
+.gridBorder {
+  border:0.05em solid #a8db9a;
+}
+
+.game-over {
+  text-align: center;
+  border: 5px solid #5468ff; /* Simpler solid border */
+  padding: 11px;
+  margin-top: 100px; /* Reduced top margin */
+  font-size: 1.2em; /* Smaller font size */
+  color: #fff;
+  background-color: #333; /* Darker background for contrast */
+  border-radius: 8px; /* More subtle rounded corners */
+}
+
+.reset-button {
+  margin-top: 10px; /* Increase the margin for more space */
+  margin-left: 55px; /* Increase the margin for more space */
+  text-align: center;
+  padding: 15px;
+  background-color: #0074a6;
+  color: white;
+  width: 80%;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.reset-button:hover {
+  background-color: #005f8c; /* Slightly darker on hover */
+}
+
+.red-message {
+  color: red;  /* Black text for contrast */
+  font-weight: bold;  /* Make the message bold */
+}
+
+.blue-message {
+  color: blue;  /* Black text for contrast */
+  font-weight: bold;  /* Make the message bold */
+}
+
+.yellow-message {
+  color: rgb(120, 120, 1);  /* Black text for contrast */
+  font-weight: bold;  /* Make the message bold */
+}
+
+.gif-overlay {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  width: 80px;  /* Adjust the size as needed */
+  height: 80px;
+  pointer-events: none;  /* Prevent the GIF from blocking clicks */
+  transition: opacity 1s ease-out;  /* Fade in/out effect */
+}
+
+.show-gif .gif-overlay {
+    opacity: 1;  /* Show GIF */
+}
