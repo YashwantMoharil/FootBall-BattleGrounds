@@ -117,3 +117,152 @@ h1 {
 .show-gif .gif-overlay {
     opacity: 1;  /* Show GIF */
 }
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;     /* center horizontally */
+  align-items: center;         /* center vertically */
+  height: 100vh;               /* take full height */
+  gap: 60px;                   /* spacing between signup and login */
+  color: white;
+  background-color: #23272f;   /* match your board bg */
+}
+
+
+.auth-container {
+  background-color: #2c2f36;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-container label {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.auth-container input {
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #4e6a50;
+  background-color: #f0f5f0;
+  font-size: 1em;
+  outline: none;
+}
+
+.auth-container input:focus {
+  border-color: #a8db9a;
+  background-color: white;
+}
+
+.auth-container button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #4e6a50;
+  color: white;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.auth-container button:hover {
+  background-color: #3a533d;
+}
+
+.auth-divider {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 70px;
+  color: #a8db9a;
+}
+
+
+.joinTicTacToe {
+  background-color: #2c2f36;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  width: 350px;
+  margin-top: 100px;
+}
+
+.joinTicTacToe h4 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  color: #a8db9a;
+}
+
+.joinTicTacToe input {
+  padding: 12px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #4e6a50;
+  background-color: #f0f5f0;
+  font-size: 1em;
+  outline: none;
+}
+
+.joinTicTacToe input:focus {
+  border-color: #a8db9a;
+  background-color: white;
+}
+
+.joinGameBtn {
+  padding: 12px 24px;
+  background-color: #4e6a50;
+  color: white;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+
+.joinGameBtn:hover {
+  background-color: #3a533d;
+}
+
+
+
+.waitingSign {
+  margin-top: 80px;
+  padding: 20px 30px;
+  background-color: #2c2f36;
+  color: #a8db9a;
+  font-size: 1.4em;
+  font-weight: bold;
+  border: 2px dashed #4e6a50;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: pulseFade 1.6s infinite;
+}
+
+/* subtle pulsing animation */
+@keyframes pulseFade {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+}

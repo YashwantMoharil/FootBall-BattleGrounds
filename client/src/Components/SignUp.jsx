@@ -20,7 +20,7 @@ function Signup({setIsAuth}) {
 
     }
   return (
-    <div className='signup'>
+    <div className='auth-container '>
     <label>SignUp</label>
     <input placeholder='First Name' onChange={(event) => {setUser({...user, firstName : event.target.value})} }/>
     <input placeholder='Last Name' onChange={(event) => {setUser({...user, lastName : event.target.value})} }/>

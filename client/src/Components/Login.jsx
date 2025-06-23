@@ -21,7 +21,7 @@ function Login({setIsAuth}) {
       })
   }
   return (
-      <div className='login'>
+      <div className='auth-container '>
     <label>Login</label>
     <input placeholder='Username' onChange={(event) => {setUserName(event.target.value)} }/>
     <input placeholder='Password' onChange={(event) => {setPassWord(event.target.value)} }/>

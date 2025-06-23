@@ -11,7 +11,10 @@ import JoinTicTacToe from './Components/JoinTicTacToe';
 
 
 function App() {
-  const API_KEY = process.env.API_KEY;
+  const API_KEY = "";
+
+  //console.log(API_KEY);
+  
   const client = StreamChat.getInstance(API_KEY);
   const cookies = new Cookies();
   const token = cookies.get("token");
@@ -49,8 +52,12 @@ function App() {
         </Chat>
          ) : 
         <>
-          <Signup setIsAuth = {setIsAuth}/>
+          <div className='auth-wrapper'>
+           <Signup setIsAuth = {setIsAuth}/>
+          <div className='auth-divider'> OR </div>
           <Login setIsAuth = {setIsAuth}/>
+          </div>
+         
         </>
       }
     </div>
