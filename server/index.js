@@ -8,8 +8,8 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-const API_KEY = ""
-const API_SECRET = "" 
+const API_KEY = process.env.API_KEY
+const API_SECRET = process.env.API_SECRET
 
 const serverClient = StreamChat.getInstance(API_KEY, API_SECRET)
 

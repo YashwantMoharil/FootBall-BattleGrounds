@@ -11,8 +11,7 @@ import JoinTicTacToe from './Components/JoinTicTacToe';
 
 
 function App() {
-  var a;
-  const API_KEY = "";
+  const API_KEY = process.env.API_KEY;
   const client = StreamChat.getInstance(API_KEY);
   const cookies = new Cookies();
   const token = cookies.get("token");
