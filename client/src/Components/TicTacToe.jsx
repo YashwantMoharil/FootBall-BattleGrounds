@@ -37,7 +37,6 @@ function TicTacToe() {
   }, [mines]);
 
   const handleTileclick = async (index) => {
-    console.log(minesBlasted[client.userID])
     if (gameState !== GameState.start && gameState !== GameState.inProgress) return;
     setGameState(GameState.inProgress);
     if (tiles[index] !== null || player !== turn) return;
@@ -57,7 +56,6 @@ function TicTacToe() {
       }
     }
     setTurn(turn === 'X' ? 'O' : 'X');
-    console.log(channel)
     await channel.sendEvent({
       type: "game move",
       data: { mines, newTiles, turn: turn === 'X' ? 'O' : 'X' }

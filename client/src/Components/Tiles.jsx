@@ -34,7 +34,6 @@ function Tiles({ className, value, onClick }) {
     }
     channel.on((event) => {
       if (event.type === "tile event" && event.user.id !== client.userID) {
-        console.log("hehe");
         setExploded(true);
       }
     })

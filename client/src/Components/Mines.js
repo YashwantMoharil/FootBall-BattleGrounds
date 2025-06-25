@@ -1,5 +1,4 @@
 function Mines (numMines) {
-  console.log("filling mines");
   let minesPlaced = 0;
   let numRows = 8;
   let numCols = 8;
