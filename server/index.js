@@ -10,7 +10,7 @@ const app = express()
 app.use(cors(
 
 {
-    origin: ["https://football-battlegrounds-ui.vercel.app/"]
+    origin: ["https://football-battlegrounds-ui.vercel.app"]
 }
 ))
 app.use(express.json())
