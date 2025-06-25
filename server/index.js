@@ -7,7 +7,12 @@ import dotenv from "dotenv"
 dotenv.config();
 
 const app = express()
-app.use(cors())
+app.use(cors(
+
+{
+    origin: ["https://football-battlegrounds-ui.vercel.app/"]
+}
+))
 app.use(express.json())
 
 const API_KEY = process.env.API_KEY
