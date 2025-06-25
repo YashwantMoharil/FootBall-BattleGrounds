@@ -3,23 +3,20 @@ import cors from "cors"
 import {v4 as uuidv4}  from "uuid"
 import bcrypt from "bcrypt"
 import { StreamChat } from "stream-chat"
-import dotenv from "dotenv"
+import dotenv from 'dotenv';
 dotenv.config();
 
-const app = express();
-
+const app = express()
 app.use(cors({
   origin: "https://football-battlegrounds-ui.vercel.app",
   methods: ["GET", "POST", "OPTIONS"],
   credentials: true
-}));
+}));app.use(express.json())
 
-app.options("*", cors());
-app.use(express.json());
+const API_KEY = process.env.API_KEY
+const API_SECRET = process.env.API_SECRET
 
-const API_KEY = process.env.API_KEY;
-const API_SECRET = process.env.API_SECRET;
-const serverClient = StreamChat.getInstance(API_KEY, API_SECRET);
+const serverClient = StreamChat.getInstance(API_KEY, API_SECRET)
 
 
 app.post("/signup", async (req, res) => {
