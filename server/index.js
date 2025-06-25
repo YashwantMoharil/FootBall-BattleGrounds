@@ -6,18 +6,20 @@ import { StreamChat } from "stream-chat"
 import dotenv from "dotenv"
 dotenv.config();
 
-const app = express()
-app.use(cors(
+const app = express();
 
-{
-    origin: ["https://football-battlegrounds-ui.vercel.app"]
-}
-))
-app.use(express.json())
+app.use(cors({
+  origin: "https://football-battlegrounds-ui.vercel.app",
+  methods: ["GET", "POST", "OPTIONS"],
+  credentials: true
+}));
 
-const API_KEY = process.env.API_KEY
-const API_SECRET = process.env.API_SECRET
-const serverClient = StreamChat.getInstance(API_KEY, API_SECRET)
+app.options("*", cors());
+app.use(express.json());
+
+const API_KEY = process.env.API_KEY;
+const API_SECRET = process.env.API_SECRET;
+const serverClient = StreamChat.getInstance(API_KEY, API_SECRET);
 
 
 app.post("/signup", async (req, res) => {
