@@ -6,7 +6,7 @@ function Signup({setIsAuth}) {
     const cookies = new Cookies();
     const [user, setUser] = useState(null)
     const signUpUser = () => {
-      axios.post("http://localhost:3001/signup", user).then(res => {
+      axios.post(`${process.env.REACT_APP_BACKEND_BASE_URL}/signup`, user).then(res => {
         const {token, userId, firstName, lastName, userName, hashedPassword} = res.data;
         
         cookies.set("token", token);
