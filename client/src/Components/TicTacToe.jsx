@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useChannelStateContext, useChatContext } from "stream-chat-react"
 import { useState } from "react";
-import Cookies from "universal-cookie"
 import Board from "./Board";
 import GameOver from "./GameOver";
 import GameState from "./GameState";
@@ -21,7 +20,6 @@ function TicTacToe() {
   const [mineCount, setMineCount] = useState(5);
   const [strike, setStrike] = useState(null);
   const [gameState, setGameState] = useState(GameState.mineCreation);
-  const cookies = new Cookies();
   const [minesBlasted, setMinesBlasted] = useState(() => new Map());
 
   function fillMines() {

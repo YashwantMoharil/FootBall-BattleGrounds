@@ -29,7 +29,7 @@ function Tiles({ className, value, onClick }) {
   };
 
   useEffect(() => {
-    if (exploded && value == -1) {
+    if (exploded && value === -1) {
       setTimeout(() => setExploded(false), 200);
     }
     channel.on((event) => {

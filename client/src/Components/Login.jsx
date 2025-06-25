@@ -7,7 +7,7 @@ function Login({setIsAuth}) {
   const [passWord, setPassWord] = useState("");
   const cookies = new Cookies();
   const logInUser = () => {
-       if(userName == "" || passWord == "") return alert("Username or Password is missing");
+       if(userName === "" || passWord === "") return alert("Username or Password is missing");
 
        axios.post("http://localhost:3001/login", {userName, passWord}).then(res => {
         const {token, userId, firstName, lastName, userName} = res.data;
