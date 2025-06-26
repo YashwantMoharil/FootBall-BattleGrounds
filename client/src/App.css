@@ -147,6 +147,7 @@ h1 {
   gap: 60px;                   /* spacing between signup and login */
   color: white;
   background-color: #23272f;   /* match your board bg */
+  position: relative;
 }
 
 
@@ -308,3 +309,19 @@ h1 {
 .logout:hover {
   background-color: #e60000;
 }
+
+.infoIcon1{
+  transform: scale(0.30);
+   top: 55px;
+  right: 125px;
+  position: absolute;
+  cursor: pointer;
+}
+.infoIcon2{
+  transform: scale(0.30);
+   top: -10px;
+  right: 623px;
+  position: absolute;
+  cursor: pointer;
+}
+
