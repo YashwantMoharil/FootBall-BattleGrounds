@@ -10,6 +10,24 @@ h1 {
   text-align: center;
 }
 
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.title img {
+  width: 400px;
+  height: auto;
+  transform: translate(0%, -15%);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.title img:hover {
+  transform: translate(0%, -15%) scale(1.05); /* keep position, add zoom */
+}
+
 .board {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
@@ -17,15 +35,14 @@ h1 {
   cursor: pointer;
   position: relative;
   background-color: #ebefe9;
-  top: 55px;
+  top: 5px;
   border: 10px solid #4e6a50; /* Darker, subtler border */
   border-radius: 16px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add depth with shadow */
   overflow: hidden;
   transition: transform 0.3s ease-in-out; /* Smooth board zoom effect on hover */
+  transform: translate(0%, -15%);
 }
-
-
 
 .grid {
   width: 60px;
@@ -47,11 +64,13 @@ h1 {
   font-size: 2em; /* Reduce font size for better fit */
   color: #333; /* Darker text color for better contrast */
   font-weight: bold;
+  
 }
 
 .messages {
   font-size:  0.4em;
   color: black;
+  
 }
 
 .gridBorder {
@@ -67,6 +86,7 @@ h1 {
   color: #fff;
   background-color: #333; /* Darker background for contrast */
   border-radius: 8px; /* More subtle rounded corners */
+  transform: translate(0%, -285%);
 }
 
 .reset-button {
@@ -119,10 +139,11 @@ h1 {
 }
 
 .auth-wrapper {
+  transform: translate(0%, 20%);
   display: flex;
   justify-content: center;     /* center horizontally */
   align-items: center;         /* center vertically */
-  height: 100vh;               /* take full height */
+  height: 40vh;               /* take full height */
   gap: 60px;                   /* spacing between signup and login */
   color: white;
   background-color: #23272f;   /* match your board bg */
@@ -265,4 +286,23 @@ h1 {
     opacity: 0.7;
     transform: scale(1);
   }
+}
+
+.logout {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #ff4d4d;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.logout:hover {
+  background-color: #e60000;
 }

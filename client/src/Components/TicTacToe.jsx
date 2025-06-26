@@ -89,8 +89,7 @@ function TicTacToe() {
 
   return (
     <div>
-      <h1>Tic Tac Toe</h1>
-      <h4>{turn === player ? client.user.name : "Opponent"} plays with {JSON.stringify(minesBlasted)} tiles broken</h4>
+     { /*<h4>{turn === player ? client.user.name : "Opponent"} plays with {JSON.stringify(minesBlasted)} tiles broken</h4>*/}
       <Board
         player={player}
         tiles={tiles}

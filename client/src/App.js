@@ -2,6 +2,7 @@ import React  from 'react';
 import './App.css';
 import Signup from './Components/SignUp';
 import Login from './Components/Login';
+import title from "./Assets/Images/title.png"
 import { StreamChat } from "stream-chat"
 import {Chat} from "stream-chat-react"
 import Cookies from "universal-cookie"
@@ -42,7 +43,15 @@ function App() {
   }
 
   return (
-    <div>
+    <div  >
+      
+  <div className='title'>
+  <img
+    src={title}
+    alt="Description"
+  />
+</div>
+
       { isAuth ?(
         <Chat client = {client}>
           <JoinTicTacToe/>
