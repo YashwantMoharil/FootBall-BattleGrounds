@@ -6,6 +6,7 @@ import GameOver from "./GameOver";
 import GameState from "./GameState";
 import Reset from "./Reset";
 import Mines from "./Mines";
+import WaitForOpponent from "./WaitForOpponent";
 
 
 function TicTacToe() {
@@ -20,6 +21,7 @@ function TicTacToe() {
   const [mineCount, setMineCount] = useState(5);
   const [strike, setStrike] = useState(null);
   const [gameState, setGameState] = useState(GameState.mineCreation);
+  const [showWait, setShowWait] = useState(false);
   const [minesBlasted, setMinesBlasted] = useState(() => new Map());
 
   function fillMines() {
@@ -87,18 +89,37 @@ function TicTacToe() {
     checkWinner(tiles, setStrike);
   }, [tiles]);
 
-  return (
-    <div>
-     { /*<h4>{turn === player ? client.user.name : "Opponent"} plays with {JSON.stringify(minesBlasted)} tiles broken</h4>*/}
-      <Board
-        player={player}
-        tiles={tiles}
-        onTileClick={handleTileclick}
-        strike={strike}
-      />
-      <GameOver gameState={gameState} />
-      <Reset gameState={gameState} onReset={handleReset} />
-    </div>
-  );
+
+
+useEffect(() => {
+  let timeout;
+  if (turn !== player) {
+    timeout = setTimeout(() => setShowWait(true), 500);
+  } else {
+    setShowWait(false);
+  }
+  return () => clearTimeout(timeout);
+}, [turn]);
+  
+    return (
+  <div>
+    {showWait ? (
+      <WaitForOpponent />
+    ) : ''}
+      <>
+        <Board
+          player={player}
+          tiles={tiles}
+          onTileClick={handleTileclick}
+          strike={strike}
+        />
+        <GameOver gameState={gameState} />
+        <Reset gameState={gameState} onReset={handleReset} />
+      </>
+    
+  </div>
+);
+
+    
 }
 export default TicTacToe;

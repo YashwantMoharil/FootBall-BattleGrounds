@@ -44,6 +44,7 @@ h1 {
   /* Add depth with shadow */
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
+  z-index: 100;
   /* Smooth board zoom effect on hover */
   transform: translate(0%, -15%);
 }
@@ -383,4 +384,24 @@ h1 {
   right: 623px;
   position: absolute;
   cursor: pointer;
+}
+.waitForOpponents {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: rgba(35, 39, 47, 0.8); /* dimmed dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8ec280;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.waitForOpponentsFade{
+  animation: pulseFade 1.5s infinite;
 }

@@ -8,13 +8,7 @@ function Facts() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setFactIndex(prev => {
-        let newIndex;
-        do {
-          newIndex = Math.floor(Math.random() * factsData.facts.length);
-        } while (newIndex === prev);
-        return newIndex;
-      });
+      setFactIndex(prev => ((prev + 1) % factsData.facts.length));
     }, 10000);
 
     return () => clearInterval(interval);

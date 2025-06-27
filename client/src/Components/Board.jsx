@@ -87,7 +87,6 @@ function Board({player, tiles, onTileClick, strike}) {
             <Tiles player = {player} onClick = {() => onTileClick(61)} value = {tiles[61]} className = 'gridBorder grid' />
             <Tiles player = {player} onClick = {() => onTileClick(62)} value = {tiles[62]} className = 'gridBorder grid' />
             <Tiles player = {player} onClick = {() => onTileClick(63)} value = {tiles[63]} className = 'gridBorder grid' />
-           
             <StrikeThrough strike = {strike}/>
             </div>
     );
