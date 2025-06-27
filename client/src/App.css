@@ -25,7 +25,8 @@ h1 {
 }
 
 .title img:hover {
-  transform: translate(0%, -15%) scale(1.05); /* keep position, add zoom */
+  transform: translate(0%, -15%) scale(1.05);
+  /* keep position, add zoom */
 }
 
 .board {
@@ -36,11 +37,14 @@ h1 {
   position: relative;
   background-color: #ebefe9;
   top: 5px;
-  border: 10px solid #4e6a50; /* Darker, subtler border */
+  border: 10px solid #4e6a50;
+  /* Darker, subtler border */
   border-radius: 16px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Add depth with shadow */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  /* Add depth with shadow */
   overflow: hidden;
-  transition: transform 0.3s ease-in-out; /* Smooth board zoom effect on hover */
+  transition: transform 0.3s ease-in-out;
+  /* Smooth board zoom effect on hover */
   transform: translate(0%, -15%);
 }
 
@@ -50,48 +54,59 @@ h1 {
   aspect-ratio: 1 / 1;
   border-radius: 12px;
   overflow: hidden;
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  transition: background-color 0.3s ease;
+  /* Smooth hover effect */
 }
 
 .grid:hover {
-  background-color: #d0f0c0; /* Light green hover effect */
+  background-color: #d0f0c0;
+  /* Light green hover effect */
 }
 
 .tile {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2em; /* Reduce font size for better fit */
-  color: #333; /* Darker text color for better contrast */
+  font-size: 2em;
+  /* Reduce font size for better fit */
+  color: #333;
+  /* Darker text color for better contrast */
   font-weight: bold;
-  
+
 }
 
 .messages {
-  font-size:  0.4em;
+  font-size: 0.4em;
   color: black;
-  
+
 }
 
 .gridBorder {
-  border:0.05em solid #a8db9a;
+  border: 0.05em solid #a8db9a;
 }
 
 .game-over {
   text-align: center;
-  border: 5px solid #5468ff; /* Simpler solid border */
+  border: 5px solid #5468ff;
+  /* Simpler solid border */
   padding: 11px;
-  margin-top: 100px; /* Reduced top margin */
-  font-size: 1.2em; /* Smaller font size */
+  margin-top: 100px;
+  /* Reduced top margin */
+  font-size: 1.2em;
+  /* Smaller font size */
   color: #fff;
-  background-color: #333; /* Darker background for contrast */
-  border-radius: 8px; /* More subtle rounded corners */
+  background-color: #333;
+  /* Darker background for contrast */
+  border-radius: 8px;
+  /* More subtle rounded corners */
   transform: translate(0%, -285%);
 }
 
 .reset-button {
-  margin-top: 10px; /* Increase the margin for more space */
-  margin-left: 55px; /* Increase the margin for more space */
+  margin-top: 10px;
+  /* Increase the margin for more space */
+  margin-left: 55px;
+  /* Increase the margin for more space */
   text-align: center;
   padding: 15px;
   background-color: #0074a6;
@@ -105,22 +120,29 @@ h1 {
 }
 
 .reset-button:hover {
-  background-color: #005f8c; /* Slightly darker on hover */
+  background-color: #005f8c;
+  /* Slightly darker on hover */
 }
 
 .red-message {
-  color: red;  /* Black text for contrast */
-  font-weight: bold;  /* Make the message bold */
+  color: red;
+  /* Black text for contrast */
+  font-weight: bold;
+  /* Make the message bold */
 }
 
 .blue-message {
-  color: blue;  /* Black text for contrast */
-  font-weight: bold;  /* Make the message bold */
+  color: blue;
+  /* Black text for contrast */
+  font-weight: bold;
+  /* Make the message bold */
 }
 
 .yellow-message {
-  color: rgb(120, 120, 1);  /* Black text for contrast */
-  font-weight: bold;  /* Make the message bold */
+  color: rgb(120, 120, 1);
+  /* Black text for contrast */
+  font-weight: bold;
+  /* Make the message bold */
 }
 
 .gif-overlay {
@@ -128,25 +150,34 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -35%);
-  width: 80px;  /* Adjust the size as needed */
+  width: 80px;
+  /* Adjust the size as needed */
   height: 80px;
-  pointer-events: none;  /* Prevent the GIF from blocking clicks */
-  transition: opacity 1s ease-out;  /* Fade in/out effect */
+  pointer-events: none;
+  /* Prevent the GIF from blocking clicks */
+  transition: opacity 1s ease-out;
+  /* Fade in/out effect */
 }
 
 .show-gif .gif-overlay {
-    opacity: 1;  /* Show GIF */
+  opacity: 1;
+  /* Show GIF */
 }
 
 .auth-wrapper {
   transform: translate(0%, 20%);
   display: flex;
-  justify-content: center;     /* center horizontally */
-  align-items: center;         /* center vertically */
-  height: 40vh;               /* take full height */
-  gap: 60px;                   /* spacing between signup and login */
+  justify-content: center;
+  /* center horizontally */
+  align-items: center;
+  /* center vertically */
+  height: 40vh;
+  /* take full height */
+  gap: 60px;
+  /* spacing between signup and login */
   color: white;
-  background-color: #23272f;   /* match your board bg */
+  background-color: #23272f;
+  /* match your board bg */
   position: relative;
 }
 
@@ -262,7 +293,8 @@ h1 {
 .waitingSign {
   margin-top: 80px;
   margin: auto;
-  max-width: 300px;
+  max-width: 360px;
+  min-width: 360px;
   padding: 20px 30px;
   background-color: #2c2f36;
   color: #a8db9a;
@@ -272,7 +304,13 @@ h1 {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   text-align: center;
+  position: relative;
+
+}
+
+.waitingSignMsg {
   animation: pulseFade 1.6s infinite;
+
 }
 
 /* subtle pulsing animation */
@@ -281,13 +319,34 @@ h1 {
     opacity: 0.7;
     transform: scale(1);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.02);
   }
+
   100% {
     opacity: 0.7;
     transform: scale(1);
+  }
+}
+
+.spinner {
+  width: 20px;
+  height: auto;
+  top: 25px;
+  right: 22px;
+  position: absolute;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 
@@ -310,18 +369,18 @@ h1 {
   background-color: #e60000;
 }
 
-.infoIcon1{
+.infoIcon1 {
   transform: scale(0.30);
-   top: 55px;
+  top: 55px;
   right: 125px;
   position: absolute;
   cursor: pointer;
 }
-.infoIcon2{
+
+.infoIcon2 {
   transform: scale(0.30);
-   top: -10px;
+  top: -10px;
   right: 623px;
   position: absolute;
   cursor: pointer;
 }
-
